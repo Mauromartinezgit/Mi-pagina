@@ -1,0 +1,153 @@
+/* ===== PÁGINA PRINCIPAL ===== */
+
+.contenedor-principal {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: black;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+/* ===== SECCIÓN BIENVENIDA ===== */
+.Bienvenida {
+  padding: 60px 0;
+  background-color: #13171C;
+}
+
+.Bienvenida-title {
+  text-align: center;
+  color:#00c9d1;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.Bienvenida__img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===== SECCIÓN PRESENTACIÓN ===== */
+.Presentacion {
+  width: 100%;
+  background-color: black;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 0; /* Sin margen inferior */
+}
+
+.Presentacion__title {
+  text-align: center;
+  color: white;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.Presentacion-parrafo {
+  color: white;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.Presentacion__img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ----------- RESPONSIVE DESIGN ----------- */
+
+/* Tablet (768px+) */
+@media (min-width: 768px) {
+  .contenedor-principal {
+    background: #13171C;
+    border-radius: 18px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+  }
+
+  .Bienvenida-title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
+
+  .Bienvenida__img {
+    max-width: 500px;
+  }
+
+  /* Layout de 2 columnas: contenido izquierda, imagen derecha */
+  .Presentacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "titulo imagen"
+      "parrafo imagen";
+    gap: 40px;
+    align-items: center;
+    padding: 60px 0;
+  }
+
+  .Presentacion__title {
+    grid-area: titulo;
+    font-size: 2.5rem;
+    text-align: left;
+    padding-left: 40px;
+  }
+
+  .Presentacion-parrafo {
+    grid-area: parrafo;
+    font-size: 1.2rem;
+    text-align: left;
+    padding: 0 40px;
+  }
+
+  .Presentacion__img {
+    grid-area: imagen;
+    max-width: 400px;
+    justify-self: end;
+    padding-right: 40px;
+  }
+}
+
+/* Desktop (1024px+) */
+@media (min-width: 1024px) {
+  .contenedor-principal {
+    padding: 60px 80px;
+    background-color: #13171C;
+  }
+
+  .Bienvenida-title {
+    font-size: 3.5rem;
+    margin-bottom: 60px;
+  }
+
+  .Presentacion {
+    gap: 60px;
+    padding: 80px 0;
+  }
+
+  .Presentacion__title {
+    font-size: 3rem;
+    padding-left: 80px;
+  }
+
+  .Presentacion-parrafo {
+    font-size: 1.4rem;
+    padding: 0 80px;
+  }
+
+  .Presentacion__img {
+    max-width: 500px;
+    padding-right: 80px;
+  }
+}

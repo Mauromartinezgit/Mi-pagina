@@ -1,0 +1,120 @@
+/* ===== Servicios ===== */
+.servicios {
+  padding: 60px 20px;
+  background: rgb(19, 13, 27) url('https://i.postimg.cc/QChhHcpB/doodle-items.png') repeat center / 400px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto; /* Sin margen superior */
+  box-sizing: border-box;
+}
+
+.servicios__contenedor {
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicios__title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: white;
+  width: 100%;
+}
+
+.servicios__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Card */
+.section__servicio {
+  background: black;
+  padding: 25px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.section__servicio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.servicio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Si prefieres que sean íconos pequeños, usa esta versión en su lugar:
+.servicio-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+  display: block;
+}
+*/
+
+.servicio-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.servicio-parrafo {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .servicios {
+    padding: 80px 48px;
+  }
+  
+  .servicios__title {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+  }
+  
+  .servicios__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  .section__servicio {
+    margin: 0;
+  }
+  
+  .servicio-img {
+    height: 250px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .servicios {
+    padding: 100px 60px;
+  }
+  
+  .servicio-img {
+    height: 280px;
+  }
+}

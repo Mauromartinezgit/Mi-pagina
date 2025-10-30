@@ -1,0 +1,147 @@
+/* ===== HEADER ===== */
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header__logo {
+    filter: brightness(0) invert(1);
+    height: 48px;
+    width: 48px;
+    display: block;
+}
+
+.header__burger {
+    width: 32px;
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    z-index: 10;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.header__burger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #fff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.header__menu {
+    display: none;
+}
+
+/* ----------- RESPONSIVE DESIGN ----------- */
+
+/* Móvil pequeño (320px - 480px) */
+@media (max-width: 480px) {
+    .header {
+        height: 64px;
+        padding: 0 12px;
+    }
+    
+    .header__logo {
+        height: 40px;
+        width: 40px;
+    }
+    
+    .header__burger {
+        width: 28px;
+        height: 20px;
+    }
+    
+    .header__burger span {
+        height: 3px;
+    }
+}
+
+/* Móvil grande / Tablet (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+    .header {
+        height: 72px;
+        padding: 0 16px;
+    }
+    
+    .header__logo {
+        height: 56px;
+        width: 56px;
+    }
+}
+
+/* Desktop (768px+) */
+@media (min-width: 768px) {
+    .header {
+        height: 114px;
+        padding: 0 48px;
+    }
+    
+    .header__logo {
+        height: 80px;
+        width: 80px;
+    }
+    
+    .header__burger {
+        display: none;
+    }
+    
+    .header__menu {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+    
+    .header__menu-link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        position: relative;
+    }
+    
+    .header__menu-link::after {
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00ADB5;
+        transition: width 0.3s ease;
+    }
+    
+    .header__menu-link:hover::after {
+        width: 100%;
+    }
+    
+    .header__menu-link:hover {
+        color: #00ADB5;
+    }
+}
+
+/* Desktop grande (1024px+) */
+@media (min-width: 1024px) {
+    .header {
+        padding: 0 80px;
+    }
+    
+    .header__menu {
+        gap: 48px;
+    }
+}

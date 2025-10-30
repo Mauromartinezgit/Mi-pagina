@@ -1,0 +1,94 @@
+/* ===== ESTILOS GLOBALES ===== */
+
+/* Scroll suave en toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: rgb(19, 13, 27);
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita scroll horizontal */
+}
+
+/* Contenedor principal consistente */
+.contenedor-principal {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #13171C;
+  box-sizing: border-box;
+}
+
+/* Contenedor de componentes dinámicos sin espacios */
+#servicios-component,
+#portfolio-component,
+#contact-component {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+/* Utilidades */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+/* Links globales */
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Imágenes responsivas por defecto */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Botones base */
+button {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Inputs base */
+input,
+textarea {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Scroll suavizado para secciones */
+section {
+  scroll-margin-top: 114px; /* Altura del header */
+  margin: 0; /* Eliminar márgenes entre secciones */
+  padding: 0; /* Reset de padding */
+}
+
+@media (max-width: 767px) {
+  section {
+    scroll-margin-top: 80px; /* Altura del header móvil */
+  }
+}
